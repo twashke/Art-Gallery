@@ -33,9 +33,13 @@ SO THAT I can enhance my skills
 - The motivation for this project is to 
 - Built with the following technologies:
     - [Bootstrap](https://getbootstrap.com/)
+    - [path](https://www.npmjs.com/package/path)    
     - [express](https://www.npmjs.com/package/express) 
+    - [express-session](https://www.npmjs.com/package/express-session) 
+    - [express-handlebars](https://www.npmjs.com/package/express-handlebars) 
     - [MySQL](https://www.mysql.com/)
     - [sequelize](https://www.npmjs.com/package/sequelize) 
+    - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
     - [multer](https://www.npmjs.com/package/multer) 
     - [cloudinary](https://www.npmjs.com/package/cloudinary) 
 
