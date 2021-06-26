@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Little Art Gallery</title>
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="col sm-12 md-6" id="login">
+          <h2>Login</h2>
+          <form>
+            <div class="row mb-3">
+              <label for="email-login" class="col-sm-2 col-form-label"
+                >Email</label
+              >
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email-login" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="password-login" class="col-sm-2 col-form-label"
+                >Password</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password-login"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="col sm-12 md-6" id="signup">
+          <h2>Signup</h2>
+          <form>
+            <div class="row mb-3">
+              <label for="username-signup" class="col-sm-2 col-form-label"
+                >Username</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="username"
+                  class="form-control"
+                  id="username-signup"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="email-signup" class="col-sm-2 col-form-label"
+                >Email</label
+              >
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email-signup" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="password-signup" class="col-sm-2 col-form-label"
+                >Password</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password-signup"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="./js/login.js"></script>
+</html>
