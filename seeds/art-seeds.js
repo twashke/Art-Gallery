@@ -12,6 +12,7 @@ const Artdata = [
     other_details: "It needs to be framed",
     img_url: "https://unsplash.com/photos/fQEVCD1lsoM",
     user_id: 1,
+    public_id: "dsfdsfdsf",
   },
   {
     art_name: "Leafs",
@@ -22,6 +23,7 @@ const Artdata = [
     other_details: "Ready to hang",
     img_url: "https://unsplash.com/photos/zg7EfU9Ifug",
     user_id: 2,
+    public_id: "dsfdsfdsf",
   },
   {
     art_name: "Water",
@@ -32,6 +34,7 @@ const Artdata = [
     other_details: "Canvas cloth",
     img_url: "https://unsplash.com/photos/ttdQ-5UXxJg",
     user_id: 3,
+    public_id: "dsfdsfdsf",
   },
 ];
 
