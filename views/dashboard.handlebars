@@ -24,12 +24,12 @@
 <div class="row row-cols-1 row-cols-md-2">
      {{#each arts as |art|}}
           <div class="col mb-4">
-               <div class="card" style="width: 18rem;">
+               <div class="card" style="width: 25rem;">
                     <img src="{{art.img_url}}" class="card-img-top" alt="{{art.art_name}}">
                     <div class="card-body">
                          <h5 class="card-title">{{art.art_name}}</h5>
                          <p class="card-text">Artist: {{art.artist_name}} Price: {{art.price}}</p>
-                         <a href="#" class="btn btn-primary">Buy Me!</a>
+                         <a href="/dashboard/{{art.id}}" class="btn btn-primary">Buy Me!</a>
                     </div>
                </div>
           </div>
