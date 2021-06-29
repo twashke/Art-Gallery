@@ -50,6 +50,10 @@ Art.init(
         key: "id",
       },
     },
+    public_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
