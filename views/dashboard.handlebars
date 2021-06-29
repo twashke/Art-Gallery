@@ -1,0 +1,12 @@
+<div class="collection-container">
+     {{#each arts as |art|}}
+          <div class="card" style="width: 18rem;">
+               <img src="{{art.img_url}}" class="card-img-top" alt="{{art.art_name}}">
+               <div class="card-body">
+                    <h5 class="card-title">{{art.art_name}}</h5>
+                    <p class="card-text">Artist: {{art.artist_name}} Price: {{art.price}}</p>
+                    <a href="#" class="btn btn-primary">Buy Me!</a>
+               </div>
+          </div>
+     {{/each}}
+</div>
