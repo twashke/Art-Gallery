@@ -7,14 +7,14 @@ router.get('/', async (req, res) => {
           res.json(err);
      });
      const arts = artData.map((art) => art.get({ plain: true }));
-     res.render('collection', { arts });
+     res.render('dashboard', { arts });
 });
 
 //Display art details
 router.get('/:id', async (req, res) => {
      const detData = await Art.findByPk(req.params.id);
      const det = detData.get({ plain: true });
-     res.render('collectionDetail', { det });
+     res.render('dashboardDetail', { det });
 });
 
 module.exports = router;
