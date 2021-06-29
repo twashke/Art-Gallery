@@ -19,22 +19,39 @@
      <div class="nav">
           <ul class="nav nav-tabs">
                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Collections</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                </li>
                <li class="nav-item">
-                    <a class="nav-link" href="#">My Dashboard</a>
+                    <a class="nav-link" href="/dashboard">My Dashboard</a>
                </li>
                <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="/collection">Collection</a>
+               </li>
+               <li class="nav-item">
+                    {{!-- {{#if loggedIn}}
+                         <button id="logout" class="btn-no-style">Logout</button>
+                    {{else}}
+                         <a href="/login">Login</a>
+                    {{/if}} --}}
+                    <a class="nav-link" href="#">Login</a>
                </li>
           </ul>
      </div>
 
-     <div class="flex-column justify-space-around">
-          <main class="container container-fluid mt-5">
-               {{{ body }}}
-          </main>
+     <br>
+     <br>
+
+     <div>
+          {{{ body }}}
      </div>
+
+     <br>
+     <br>
+     <footer class="footer">
+          <div class="container">
+               <span class="text-muted">Copyright 2021 - (Kyle, Tiffany, Gunjan, Tami)</span>
+          </div>
+     </footer>
 
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
