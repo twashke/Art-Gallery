@@ -5,16 +5,64 @@
      <title>Happy Little Art Gallery</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link rel="stylesheet" href="/css/jass.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="/css/style.css">
+     
 </head>
 <body>
-     <div class="jumbotron jumbotron-fluid">
+     {{!-- <div class="jumbotron jumbotron-fluid">
           <div class="container">
                <h1 class="display-4">Happy Little Art Gallery</h1>
           </div>
-     </div>
+     </div> --}}
+{{!-- <div class="nav">
+     <ul class="nav nav-tabs">
+          <li class="nav-item">
+               <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link" href="/dashboard">My Dashboard</a>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link active" href="/collection">Collection</a>
+          </li>
+          <li class="nav-item">
+               {{#if loggedIn}}
+                    <a class="nav-link" href="/logout">Logout</a>
+               {{else}}
+                    <a class="nav-link" href="/login">Login</a>
+               {{/if}}
+          </li>
+     </ul>
+</div> --}}
 
+<nav class="navbar navbar-expand-lg navbar-dark  py-5">
+ <a class="navbar-brand " href="#">
+    <img  src="/image/elephantlogo.png" width="100rem" height="100rem" alt=""><span  style=" font-family: Roboto, sans-serif; color: yellowgreen ; font-size: 2.5
+    rem; ">Happy Little Art Gallery</span>
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="/collection">Collection</a>
+      <a class="nav-link" href="/dashboard">Dashboard</a>
+      {{#if loggedIn}}
+                    <a class="nav-link" href="/logout">Logout</a>
+               {{else}}
+                    <a class="nav-link" href="/login">Login</a>
+               {{/if}}
+    </div>
+  </div>
+</nav>
+
+
+
+<br><br>
      <div>
           {{{ body }}}
      </div>
@@ -23,7 +71,7 @@
 
      <footer class="footer">
           <div class="container">
-               <span class="text-muted">Copyright 2021 - (Kyle, Tiffany, Gunjan, Tami)</span>
+               <span class="text-muted  ">Copyright 2021 - (Kyle, Tiffany, Gunjan, Tami)</span>
           </div>
      </footer>
 
