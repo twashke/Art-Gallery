@@ -2,12 +2,15 @@
 :root {
   --prim: #f9f9f9;
   --sec: #deedf0;
+  --font: #4d3a33;
   --tert: #393e46;
   --finger: pointer;
 }
 
 * {
   font-family: "Laila", sans-serif;
+  color: var(--font);
+  text-decoration: none;
 }
 
 html {
@@ -29,13 +32,23 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 800px;
   padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font);
+}
+.nav a:hover,
+a.active {
+  color: var(--prim);
 }
 
 .nav {
   width: 100%;
   background-color: var(--prim);
+  font-size: 24px;
 }
 
 .jumbotron {
