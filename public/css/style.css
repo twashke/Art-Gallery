@@ -70,8 +70,6 @@ article {
 .card-style {
   columns: 250px;
   column-gap: 20px;
-  /* font-family: sans-serif;
-  font-size: 80%; */
   background: #ccc;
   line-height: 1.2;
   margin: 4em;
@@ -82,9 +80,6 @@ article {
 
 .card-style-detail {
   columns: 1200px;
-  /* column-gap: 20px; */
-  /* font-family: sans-serif; */
-  /* font-size: 80%; */
   background: #ccc;
   line-height: 1.2;
   margin: 4em;
