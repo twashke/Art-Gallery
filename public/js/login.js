@@ -50,3 +50,13 @@ document
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
+
+// change submit buttons onclick
+document.getElementById("submitBtn").onclick(function () {
+  document
+    .getElementById("submitBtm")
+    .outerHTML(
+      '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
+    )
+    .setAttribute("disabled", true);
+});
