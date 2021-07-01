@@ -19,9 +19,25 @@
      </ul>
 </div>
 
-<br><br>
+<div class="card-style-detail">
+     <article>
+          <p><img src="{{det.img_url}}" class="card-img-top" alt="{{det.art_name}}"></p>
 
-<div class="container">
+          <p>Artist: {{det.artist_name}}</p>
+          <p>Title: {{det.art_name}}</p>
+          <p>Technique: {{det.technique}}</p>
+          <p>Dimensions: {{det.dimension}}</p>
+          <p>Price: {{det.price}}</p>
+          <p>Other Details: {{det.other_details}}</p>
+
+
+          <p><a href="/buyme{{art.id}}" class="btn btn-primary update">Purchase now</a></p>
+     </article>
+</div>
+
+
+
+{{!-- <div class="container">
      <div class="row">
           <div class="col">
                <p><img src="{{det.img_url}}" class="card-img-top" alt="{{det.art_name}}"></p>
@@ -45,4 +61,4 @@
                <p>Other Details: {{det.other_details}}</p>
           </div>
      </div>
-</div>
+</div> --}}
