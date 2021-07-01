@@ -19,7 +19,7 @@ const withAuth = require("../../utils/auth");
 // });
 
 //get all pieces of art for collection page
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const artData = await Art.findAll({
       order: [["created_at", "DESC"]],
@@ -30,7 +30,7 @@ router.get("/", async (req, res) => {
       arts,
       // Pass the logged in flag to the template
       //correct in nav as well with same var name
-      logged_in: req.session.logged_in,
+      loggedIn: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -69,7 +69,7 @@ router.get("/:id", async (req, res) => {
     //res.json(artDetailsForId);
     res.render("collectionDetail", {
       artDetailsForId,
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);

@@ -3,7 +3,7 @@ const { Comment, Art, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // get all comments  /api/comments
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
   Comment.findAll({
     attributes: ["id", "text", "user_id", "art_id"],
   })
@@ -49,13 +49,13 @@ router.get("/:id", (req, res) => {
 //       res.status(400).json(err);
 //     });
 // });
-
-router.post("/", (req, res) => {
+//with auth and check if req.session is true
+router.post("/", withAuth, (req, res) => {
   Comment.create({
     text: req.body.text,
     art_id: req.body.art_id,
     // change body with session when using auth
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((commentData) => {
       res.json(commentData);
