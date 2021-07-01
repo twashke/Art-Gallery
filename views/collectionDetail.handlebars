@@ -1,31 +1,30 @@
-
-<div class="container">
-     <div class="row">
-          <div class="col">
-               <p><img src="{{artDetailsForId.img_url}}" class="card-img-top" alt="{{artDetailsForId.art_name}}"></p>
-               <p>
-               <form  id="comment-form">
-                    <div class="form-group">
-                         <label for="comment-body">Comments on this Masterpiece (be nice): </label>
-                         <textarea name="comment-body" class="form-control" rows="5"></textarea>
-                         <button type="submit" class="btn">Submit!</button>
-                    </div>
-               </form>
-        
-          </div>
-          <div class="col">
-               <p>Artist: {{artDetailsForId.artist_name}}</p>
-               <p>Title: {{artDetailsForId.art_name}}</p>
-               <p>Technique: {{artDetailsForId.technique}}</p>
-               <p>Dimensions: {{artDetailsForId.dimension}}</p>
-               <p>Price: {{artDetailsForId.price}}</p>
-               <p>Other Details: {{artDetailsForId.other_details}}</p>
-          </div>
-           <div class="col">
-             {{#if artDetailsForId.comments.length}}
-                {{> comments artDetailsForId.comments}}
-             {{/if}}
+<div class="card-style-detail">
+     <div class="container-fluid ">
+          <div class="row">
+               <div class="col-sm-7 col-md-7 col-lg-8">
+                    <p><img src="{{artDetailsForId.img_url}}" class="card-img-top" alt="{{artDetailsForId.art_name}}">
+                    </p>
+                    {{#if artDetailsForId.comments.length}}
+                         {{> comments artDetailsForId.comments}}
+                    {{/if}}
+               </div>
+               <div class="col-sm-5 col-md-5 col-lg-4">
+                    <p><a href="/buyme{{art.id}}" class="btn btn-primary update">Purchase now</a></p>
+                    Artist: {{artDetailsForId.artist_name}}<br>
+                    Title: {{artDetailsForId.art_name}}<br Technique: {{artDetailsForId.technique}}<br>
+                    Dimensions: {{artDetailsForId.dimension}}<br>
+                    Price: {{artDetailsForId.price}}<br>
+                    Other Details: {{artDetailsForId.other_details}}<br>
+                    <form id="comment-form">
+                         <div class="form-group">
+                              <label for="comment-body"><strong>Comments (be nice): </strong></label>
+                              <textarea name="comment-body" class="form-control" rows="5"></textarea><br>
+                              <button type="submit" class="btn btn-primary">Add Comment</button>
+                         </div>
+                    </form>
+               </div>
           </div>
      </div>
 </div>
+
 <script src="/js/addcomment.js"></script>

@@ -58,6 +58,44 @@ html {
 .footer {
   color: var(--sec);
 }
+
+/* BEGIN CARD STYLING */
+article {
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.card-style {
+  columns: 250px;
+  column-gap: 20px;
+  /* background: #ccc; */
+  background: #deedf0;
+  line-height: 1.2;
+  margin: 4em;
+  padding: 2em;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.card-style-detail {
+  columns: 800px;
+  /* background: #ccc; */
+  background: #deedf0;
+  line-height: 1.2;
+  margin: 4em;
+  padding: 2em;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+article {
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
+}
+/* END CARD STYLING */
+
 /* animation for title? */
 
 /* .focus-in-expand-fwd {
