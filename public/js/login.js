@@ -12,9 +12,10 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to log in.");
+      document.location.replace("/login");
     }
   }
 };
@@ -34,9 +35,10 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert("Failed to sign up.");
+      document.location.replace("/login");
     }
   }
 };
