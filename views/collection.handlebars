@@ -1,45 +1,13 @@
+<div class="card-style">
+     {{#each arts as |art|}}
+          <article>
+               <a href=" /dashboard/{{art.id}}"><img src="{{art.img_url}}" class="card-img-top"
+                         alt="{{art.art_name}}"></a>
+               <h3>{{art.art_name}}</h3>
+               <p>Artist: {{art.artist_name}}</p>
+               <p>Price: {{art.price}}</p>
+               <a href="/collection/{{art.id}}" class="btn btn-primary">Buy Me!</a>
+          </article>
+     {{/each}}
+</div>
 
-<section class="row justify-space-between">
-  {{#each arts as |art|}}
-   <div class="col-12 col-sm-6 col-lg-4 mb-3">
-        <div class="card">
-          <h3 class="card-header"> <a href="/collection/{{art.id}}"> Know More</a></h3>
-          <img
-            src="{{art.img_url}}"
-            alt="{{art.art_name}}"
-            class="card-img-top"
-            style="height: 18rem; object-fit: fill"
-          />
-          <div class="card-footer">
-            <a href="/collection/buy" class="btn btn-primary">Buy Me!</a>
-          </div>
-        </div>
-      </div>  
-  {{/each}}
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-{{!-- 
-
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-{{#each arts as |art|}}
-  <div class="card">
-    <img src="{{art.img_url}}" class="card-img-top" alt="{{art.art_name}}">
-    <div class="card-body">
-      <a href="/collection/{{art.id}}"> Know More</a>
-    </div>
-    <div class="card-footer">
-       <a href="/collection/buy" class="btn btn-primary">Buy Me!</a>
-    </div>
-      {{/each}}
-</div> --}}

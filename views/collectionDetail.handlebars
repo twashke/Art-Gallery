@@ -1,31 +1,15 @@
+<div class="card-style-detail">
+     <article>
+          <p><img src="{{det.img_url}}" class="card-img-top" alt="{{det.art_name}}"></p>
 
-<div class="container">
-     <div class="row">
-          <div class="col">
-               <p><img src="{{artDetailsForId.img_url}}" class="card-img-top" alt="{{artDetailsForId.art_name}}"></p>
-               <p>
-               <form  id="comment-form">
-                    <div class="form-group">
-                         <label for="comment-body">Comments on this Masterpiece (be nice): </label>
-                         <textarea name="comment-body" class="form-control" rows="5"></textarea>
-                         <button type="submit" class="btn">Submit!</button>
-                    </div>
-               </form>
-        
-          </div>
-          <div class="col">
-               <p>Artist: {{artDetailsForId.artist_name}}</p>
-               <p>Title: {{artDetailsForId.art_name}}</p>
-               <p>Technique: {{artDetailsForId.technique}}</p>
-               <p>Dimensions: {{artDetailsForId.dimension}}</p>
-               <p>Price: {{artDetailsForId.price}}</p>
-               <p>Other Details: {{artDetailsForId.other_details}}</p>
-          </div>
-           <div class="col">
-             {{#if artDetailsForId.comments.length}}
-                {{> comments artDetailsForId.comments}}
-             {{/if}}
-          </div>
-     </div>
+          <p>Artist: {{det.artist_name}}</p>
+          <p>Title: {{det.art_name}}</p>
+          <p>Technique: {{det.technique}}</p>
+          <p>Dimensions: {{det.dimension}}</p>
+          <p>Price: {{det.price}}</p>
+          <p>Other Details: {{det.other_details}}</p>
+
+
+          <p><a href="/buyme{{art.id}}" class="btn btn-primary update">Purchase now</a></p>
+     </article>
 </div>
-<script src="/js/addcomment.js"></script>
