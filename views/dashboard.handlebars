@@ -1,24 +1,3 @@
-<div class="nav">
-     <ul class="nav nav-tabs">
-          <li class="nav-item">
-               <a class="nav-link" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-               <a class="nav-link active" href="/dashboard">My Dashboard</a>
-          </li>
-          <li class="nav-item">
-               <a class="nav-link" href="/collection">Collection</a>
-          </li>
-          <li class="nav-item">
-               {{#if loggedIn}}
-                    <a class="nav-link" href="/logout">Logout</a>
-               {{else}}
-                    <a class="nav-link" href="/login">Login</a>
-               {{/if}}
-          </li>
-     </ul>
-</div>
-
 <div class="card-style">
      {{#each arts as |art|}}
           <article>
@@ -27,8 +6,14 @@
                <h3>{{art.art_name}}</h3>
                <p>Artist: {{art.artist_name}}</p>
                <p>Price: {{art.price}}</p>
-               <a href="/dashboard/{{art.id}}" class="btn btn-primary update">Update</a>
-               <a href="/api/arts/{{art.id}}" class="btn btn-primary delete">Delete</a>
+               <form id="artdelete">
+                    <div class="form-group">
+                         <a href="/dashboard/{{art.id}}" class="btn btn-primary update">Update</a>
+                         <button type="submit" class="btn btn-primary">Delete</a>
+                    </div>
+               </form>
           </article>
      {{/each}}
 </div>
+
+<script src="/js/deleteart.js"></script>

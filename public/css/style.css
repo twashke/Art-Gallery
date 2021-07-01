@@ -70,7 +70,8 @@ article {
 .card-style {
   columns: 250px;
   column-gap: 20px;
-  background: #ccc;
+  /* background: #ccc; */
+  background: #deedf0;
   line-height: 1.2;
   margin: 4em;
   padding: 2em;
@@ -79,8 +80,9 @@ article {
 }
 
 .card-style-detail {
-  columns: 1200px;
-  background: #ccc;
+  columns: 800px;
+  /* background: #ccc; */
+  background: #deedf0;
   line-height: 1.2;
   margin: 4em;
   padding: 2em;

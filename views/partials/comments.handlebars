@@ -1,9 +1,10 @@
-  {{#each this}}
-    <div class=" card">
-       {{!-- <div class="card-header"></div> --}}
-          <div class="card-body">
-             <p class="mb-3">{{text}}</p>
-             <p class="mb-3">by {{user.username}}, on {{format_date created_at}}</p>
-          </div>
-    </div>
-  {{/each}}
+{{#each this}}
+     <div class="card">
+          <blockquote class="blockquote">
+               <p class="mb-0">{{text}}</p>
+               <footer class="blockquote-footer font-italic">
+                    <cite title="Commenter"><small>{{user.username}}, on {{format_date created_at}}</small></cite>
+               </footer>
+          </blockquote>
+     </div>
+{{/each}}
