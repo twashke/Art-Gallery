@@ -7,7 +7,7 @@ const withAuth = require("../../utils/auth");
 // id,art_name,artist_name,technique,dimension,price,other_details,img_url,user_id
 // /api/arts/ will save art to cloudinary and db
 
-router.post("/", artUpload.single("myimage"), (req, res) => {
+router.post("/", withAuth, artUpload.single("myimage"), (req, res) => {
   Art.create({
     art_name: req.body.art_name,
     artist_name: req.body.artist_name,
@@ -28,44 +28,89 @@ router.post("/", artUpload.single("myimage"), (req, res) => {
 });
 
 // delete art by artid   endpoint /api/arts/4
-router.delete("/:id", (req, res) => {
-  Art.findOne(
-    {
-      where: {
-        id: req.params.id,
+// router.delete("/:id", withAuth, (req, res) => {
+//   console.log(req.params.id);
+//   Art.findOne(
+//     {
+//       where: {
+//         id: req.params.id,
+//       },
+//     },
+//     {
+//       attributes: ["public_id"],
+//     }
+//   )
+//     .then((deleteArt) => {
+//       const publicIdToBeDeleted = deleteArt.get({ plain: true });
+//       cloudinary.uploader.destroy(publicIdToBeDeleted.public_id, (err) => {
+//         if (err)
+//           console.log(err, "Not able to delete an image from Cloudinary");
+//         console.log(publicIdToBeDeleted.public_id, "deleted");
+//       });
+//     })
+//     .catch((err) => {
+//       res.status(500).json(err);
+//     });
+
+//   Art.destroy({
+//     where: {
+//       id: req.params.id,
+//     },
+//   })
+//     .then((deleteArt) => {
+//       if (!deleteArt) {
+//         res.status(404).json({ message: "No art found" });
+//         return;
+//       }
+//       res.json(deleteArt);
+//     })
+//     .catch((err) => {
+//       res.status(500).json(err);
+//     });
+// });
+
+// delete art by artid   endpoint /api/arts/4
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    console.log(req.params.id);
+    const deleteArt = await Art.findOne(
+      {
+        where: {
+          id: req.params.id,
+        },
       },
-    },
-    {
-      attributes: ["public_id"],
-    }
-  ).then((deleteArt) => {
+      {
+        attributes: ["public_id"],
+      }
+    );
+
     const publicIdToBeDeleted = deleteArt.get({ plain: true });
     cloudinary.uploader.destroy(publicIdToBeDeleted.public_id, (err) => {
       if (err) console.log(err, "Not able to delete an image from Cloudinary");
-      //  console.log(publicIdToBeDeleted.public_id, "deleted");
+      console.log(publicIdToBeDeleted.public_id, "deleted");
     });
-  });
 
-  Art.destroy({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((deleteArt) => {
-      if (!deleteArt) {
-        res.status(404).json({ message: "No art found" });
-        return;
-      }
-      res.json(deleteArt);
-    })
-    .catch((err) => {
-      res.status(500).json(err);
+    const deleteArtInDb = await Art.destroy({
+      where: {
+        id: req.params.id,
+      },
     });
+
+    if (!deleteArtInDb) {
+      res.status(404).json({ message: "No art found" });
+      return;
+    }
+    res.json(deleteArtInDb);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 // endpoint /api/arts/1
 // update an art by artid
-router.put("/:id", artUpload.single("myimage"), (req, res) => {
+router.put("/:id", withAuth, artUpload.single("myimage"), (req, res) => {
+  console.log("@@@@@@@@@@@@@@@@@ inside");
   const updateData = {
     art_name: req.body.art_name,
     artist_name: req.body.artist_name,
