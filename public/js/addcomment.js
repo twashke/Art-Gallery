@@ -10,7 +10,7 @@ async function commentFormHandler(event) {
   ];
 
   //will remove this and from fecth req when user_id is taken from seesion
-  const user_id = 1;
+  //   const user_id = 1;
 
   if (text) {
     const response = await fetch("/api/comments/", {
@@ -18,7 +18,7 @@ async function commentFormHandler(event) {
       body: JSON.stringify({
         art_id,
         text,
-        user_id,
+        // user_id,
       }),
       headers: {
         "Content-Type": "application/json",
