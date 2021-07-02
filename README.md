@@ -17,8 +17,7 @@ AS a budding artist
 I WANT TO have feedback from other artist in the form of comments
 SO THAT I can enhance my skills
 
-
-## Table of Contents 
+## Table of Contents
 
 - [About the Project](#about-the-project)
 - [Installation](#installation)
@@ -30,30 +29,32 @@ SO THAT I can enhance my skills
 
 ## About the Project
 
-- The motivation for this project is to 
+- The motivation for this project is to create a place for a user to sell their art and to buy other user's art.
+- This website requires the user to sign in to view their personal dashboard or the collections of all
 - Built with the following technologies:
-    - [Bootstrap](https://getbootstrap.com/)
-    - [path](https://www.npmjs.com/package/path)    
-    - [express](https://www.npmjs.com/package/express) 
-    - [express-session](https://www.npmjs.com/package/express-session) 
-    - [express-handlebars](https://www.npmjs.com/package/express-handlebars) 
-    - [MySQL](https://www.mysql.com/)
-    - [sequelize](https://www.npmjs.com/package/sequelize) 
-    - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) 
-    - [multer](https://www.npmjs.com/package/multer) 
-    - [cloudinary](https://www.npmjs.com/package/cloudinary) 
 
--   
+  - [Bootstrap](https://getbootstrap.com/)
+  - [path](https://www.npmjs.com/package/path)
+  - [express](https://www.npmjs.com/package/express)
+  - [express-session](https://www.npmjs.com/package/express-session)
+  - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+  - [MySQL](https://www.mysql.com/)
+  - [sequelize](https://www.npmjs.com/package/sequelize)
+  - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+  - [multer](https://www.npmjs.com/package/multer)
+  - [cloudinary](https://www.npmjs.com/package/cloudinary)
+
+-
 
 ## Installation
 
-- Open [Art Gallery](https://github.com/twashke/Art-Gallery) 
-- 
+- Open [Art Gallery](https://github.com/twashke/Art-Gallery)
+-
 
 ## Usage
 
 - Go to [Deployed Heroku Website(insert link here)
-- 
+-
 
 Images or Gif \
 ![Images or Gif](insert file here) \
@@ -63,7 +64,6 @@ Images or Gif \
 \
 Images or Gif \
 ![Images or Gif](insert file here) \
-
 
 ## Contributing
 
@@ -76,14 +76,14 @@ Images or Gif \
 
 ## License
 
-This application is covered by the [MIT License](https://opensource.org/licenses/MIT). 
-       
+This application is covered by the [MIT License](https://opensource.org/licenses/MIT).
+
       Copyright 2021 Gunjan Bhargava, Kyle Canoy, Tami Shepard, Tiffany Washke
 
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-      
+
       The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-      
+
       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Questions
@@ -100,19 +100,18 @@ This application is covered by the [MIT License](https://opensource.org/licenses
 - **Email directly at** kcanoy@uw.edu
 - **GitHub User Name:** [jkcanoy](https://github.com/jkcanoy)
 
-![Developer Profile Picture](https://avatars.githubusercontent.com/u/78453584?v=4) 
+![Developer Profile Picture](https://avatars.githubusercontent.com/u/78453584?v=4)
 
 **Contact Tami Shepard**
 
 - **Email directly at** thugfencer@gmail.com
 - **GitHub User Name:** [Tami Shepard](https://github.com/Fett-Boba)
 
-![Developer Profile Picture](https://avatars.githubusercontent.com/u/80312113?v=4) 
+![Developer Profile Picture](https://avatars.githubusercontent.com/u/80312113?v=4)
 
 **Contact Tiffany Washke**
 
 - **Email directly at** twashke@gmail.com
 - **GitHub User Name:** [Tiffany Washke](https://github.com/twashke)
 
-![Developer Profile Picture](https://avatars.githubusercontent.com/u/79234530?v=4) 
-
+![Developer Profile Picture](https://avatars.githubusercontent.com/u/79234530?v=4)
