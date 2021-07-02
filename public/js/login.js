@@ -7,9 +7,9 @@ const loginFormHandler = async (event) => {
   if (email && password) {
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
-    });
+      body: JSON.stringify({ email, password }),
+      })
 
     if (response.ok) {
       document.location.replace("/dashboard");
@@ -25,11 +25,11 @@ document
   .addEventListener("submit", loginFormHandler);
 
 // change submit buttons onclick
-document.getElementById("submitBtn").onclick(function () {
+document.getElementById("submitBtn").onclick = function () {
   document
     .getElementById("submitBtn")
     .outerHTML(
       '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
     )
     .setAttribute("disabled", true);
-});
+};
