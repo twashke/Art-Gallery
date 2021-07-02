@@ -26,11 +26,11 @@ document
   .addEventListener("submit", signupFormHandler);
 
 // change submit buttons onclick
-document.getElementById("submitBtn").onclick(function () {
+document.getElementById("submitBtn").onclick = function () {
   document
     .getElementById("submitBtn")
     .outerHTML(
       '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
     )
     .setAttribute("disabled", true);
-});
+};
