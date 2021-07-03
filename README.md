@@ -79,10 +79,10 @@ Images or Gif \
 
 ## Contributing
 
-- [Gunjan Bhargava](https://github.com/gunjanb)
-- [Kyle Canoy](https://github.com/jkcanoy)
-- [Tami Shepard](https://github.com/Fett-Boba)
-- [Tiffany Washke](https://github.com/twashke)
+- [Gunjan Bhargava](#Contact-Gunjun-Bhargava)
+- [Kyle Canoy](#Contact-Kyle-Canoy)
+- [Tami Shepard](#Contact-Tami-Shepard)
+- [Tiffany Washke](#Contact-Tiffany-Washke)
 
 ## Tests
 
@@ -103,28 +103,28 @@ This application is covered by the [MIT License](https://opensource.org/licenses
 
 ## Questions
 
-**Contact Gunjun Bhargava**
+## **Contact Gunjun Bhargava**
 
 - **Email directly at** gunjanb2006@gmail.com
 - **GitHub User Name:** [gunjanb](https://github.com/gunjanb)
 
 ![Developer Profile Picture](https://avatars.githubusercontent.com/u/13214814?v=4)
 
-**Contact Kyle Canoy**
+## **Contact Kyle Canoy**
 
 - **Email directly at** kcanoy@uw.edu
 - **GitHub User Name:** [jkcanoy](https://github.com/jkcanoy)
 
 ![Developer Profile Picture](https://avatars.githubusercontent.com/u/78453584?v=4)
 
-**Contact Tami Shepard**
+## **Contact Tami Shepard**
 
 - **Email directly at** thugfencer@gmail.com
 - **GitHub User Name:** [Tami Shepard](https://github.com/Fett-Boba)
 
 ![Developer Profile Picture](https://avatars.githubusercontent.com/u/80312113?v=4)
 
-**Contact Tiffany Washke**
+## **Contact Tiffany Washke**
 
 - **Email directly at** twashke@gmail.com
 - **GitHub User Name:** [Tiffany Washke](https://github.com/twashke)
