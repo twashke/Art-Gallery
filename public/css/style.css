@@ -13,7 +13,6 @@
 
 html {
   position: relative;
-  min-height: 100%;
 }
 
 .container {
@@ -39,6 +38,7 @@ html {
 .jumbotron {
   background-color: var(--sec);
   margin-bottom: 0;
+  min-height: 20vh;
 }
 
 .jumbotron h1 {
@@ -47,12 +47,22 @@ html {
 }
 
 .pic-carousel-container {
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 50vw;
 }
 
 .pic-carousel {
   border-radius: 10px;
+}
+
+.carousel-control.next,
+.carousel-control.prev {
+  left: 0;
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 100px;
 }
 
 .blockquote {
