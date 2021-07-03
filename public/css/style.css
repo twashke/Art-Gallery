@@ -74,7 +74,6 @@ article {
 .card-style {
   columns: 250px;
   column-gap: 20px;
-  /* background: #ccc; */
   background: #deedf0;
   line-height: 1.2;
   margin: 4em;
@@ -85,7 +84,23 @@ article {
 
 .card-style-detail {
   columns: 800px;
-  /* background: #ccc; */
+  background: #deedf0;
+  line-height: 1.2;
+  margin: 4em;
+  padding: 2em;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.card-style-center {
+  text-align: center;
+  line-height: 1.2;
+  margin: 4em;
+  padding: 2em;
+}
+
+.card-style-addform {
+  columns: 400px;
   background: #deedf0;
   line-height: 1.2;
   margin: 4em;
