@@ -13,7 +13,6 @@
 
 html {
   position: relative;
-  min-height: 100%;
 }
 
 .container {
@@ -39,6 +38,7 @@ html {
 .jumbotron {
   background-color: var(--sec);
   margin-bottom: 0;
+  min-height: 20vh;
 }
 
 .jumbotron h1 {
@@ -47,12 +47,22 @@ html {
 }
 
 .pic-carousel-container {
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 50vw;
 }
 
 .pic-carousel {
   border-radius: 10px;
+}
+
+.carousel-control.next,
+.carousel-control.prev {
+  left: 0;
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 100px;
 }
 
 .blockquote {
@@ -74,7 +84,6 @@ article {
 .card-style {
   columns: 250px;
   column-gap: 20px;
-  /* background: #ccc; */
   background: #deedf0;
   line-height: 1.2;
   margin: 4em;
@@ -85,7 +94,23 @@ article {
 
 .card-style-detail {
   columns: 800px;
-  /* background: #ccc; */
+  background: #deedf0;
+  line-height: 1.2;
+  margin: 4em;
+  padding: 2em;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.card-style-center {
+  text-align: center;
+  line-height: 1.2;
+  margin: 4em;
+  padding: 2em;
+}
+
+.card-style-addform {
+  columns: 400px;
   background: #deedf0;
   line-height: 1.2;
   margin: 4em;
