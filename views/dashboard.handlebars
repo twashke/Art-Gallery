@@ -1,19 +1,51 @@
-<div class="card-style">
-     {{#each arts as |art|}}
-          <article>
-               <a href=" /dashboard/{{art.id}}"><img src="{{art.img_url}}" class="card-img-top"
-                         alt="{{art.art_name}}"></a>
-               <h3>{{art.art_name}}</h3>
-               <p>Artist: {{art.artist_name}}</p>
-               <p>Price: {{art.price}}</p>
-               <form id="artdelete">
-                    <div class="form-group">
-                         <a href="/dashboard/{{art.id}}" class="btn btn-primary update">Update</a>
-                         <button type="submit" class="btn btn-primary">Delete</a>
-                    </div>
-               </form>
-          </article>
-     {{/each}}
+<div id="addnewart" class="card-style-center">
+     <p>Welcome to the dashboard! This is where you can manage your masterpieces by adding,
+          changing, and deleting artwork. When uploading be sure to use .jpg or .png images.</p>
+     <p><a href="/dashboard/add" class="btn btn-primary">Add New Art</a></p>
 </div>
 
+{{#if userArts.arts.length}}
+     <div id="allartsbyuser" class="card-style">
+          {{#each userArts.arts}}
+               <article>
+                    <a href="/dashboard/update/{{id}}"><img src="{{img_url}}" class="card-img-top"
+                              alt="{{art_name}}"></a>
+                    <h3>{{art_name}}</h3>
+                    Technique: {{technique}}<br>
+                    Dimensions: {{dimension}}<br>
+                    Price: {{price}}
+                    <form id="artdelete">
+                         <div class="form-group">
+                              <a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a>
+                              <button id="deleteart" data-id="{{id}}" type="submit" class="btn btn-primary">Delete</a>
+                         </div>
+                    </form>
+               </article>
+          {{/each}}
+     </div>
+{{/if}}
+
 <script src="/js/deleteart.js"></script>
+
+
+{{!-- ------------------------------------------------------------------------------------------------------------------------- --}}
+
+{{!-- {{#if userArts.arts.length}}
+     <section id="allartsbyuser" class="row justify-space-between">
+          {{#each userArts.arts}}
+               <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card">
+                         <img src="{{img_url}}" alt="{{art_name}}" class="card-img-top"
+                              style="height: 18rem; object-fit: fill" />
+                         <div class="card-footer ">
+                              <button id="deleteart" class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+                              <a href="/dashboard/update/{{id}}" class="btn btn-primary">Update!</a>
+                         </div>
+                    </div>
+               </div>
+          {{/each}}
+     </section>
+{{/if}}
+
+<a href="/dashboard/add" class="btn btn-primary">Add an art</a>
+<script src="/js/deleteart.js"></script> --}}
