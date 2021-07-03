@@ -1,5 +1,9 @@
+<div class="card-style-detail">
+     <div class="container-fluid ">
+          <div class="row">
+
                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <form id="artupdate">
+                    <form id="updateart">
                          <div class="form-group">
                               <label class="control-label" for="update-title">Title: </label>
                               <input class="form-control" type="text" id="update-title" name="update-title">
@@ -22,22 +26,23 @@
                                    name="update-otherdetails">
                          </div>
                          <div>
-                              <p><button type="submit" class="btn btn-primary">Update</button></p>
+                              <p><button id="updateart" type="submit" class="btn btn-primary">Update</button></p>
+                              {{!-- <p><a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a></p> --}}
                          </div>
                     </form>
                </div>
 
                <div class="col-sm-8 col-md-8 col-lg-8 align-self-center">
-                    <p><img src="{{det.img_url}}" class="card-img-top" alt="{{det.art_name}}"></p>
-                    Artist: {{det.artist_name}}<br>
-                    Title: {{det.art_name}}<br>
-                    Technique: {{det.technique}}<br>
-                    Dimensions: {{det.dimension}}<br>
-                    Price: {{det.price}}<br>
-                    Other Details: {{det.other_details}}<br>
+                    <p><img src="{{art.img_url}}" class="card-img-top" alt="{{art.art_name}}"></p>
+                    Artist: {{art.artist_name}}<br>
+                    Title: {{art.art_name}}<br>
+                    Technique: {{art.technique}}<br>
+                    Dimensions: {{art.dimension}}<br>
+                    Price: {{art.price}}<br>
+                    Other Details: {{art.other_details}}<br>
                </div>
           </div>
      </div>
 </div>
 
-<script src="/js/updateart.js"></script>
+<script src="/js/updateArt.js"></script>
