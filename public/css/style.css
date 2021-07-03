@@ -73,6 +73,18 @@ html {
   color: var(--sec);
 }
 
+/* BEGIN FORM INPUT BUTTON STYLING */
+/* input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+} */
+/* END FORM INPUT BUTTON STYLING */
+
 /* BEGIN CARD STYLING */
 article {
   padding: 20px;
