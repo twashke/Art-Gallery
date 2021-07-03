@@ -14,12 +14,16 @@
     "multer": "^1.4.2",
     "multer-storage-cloudinary": "^4.0.0",
     "mysql2": "^2.2.5",
+    "nodemon": "^2.0.8",
     "sequelize": "^6.6.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",

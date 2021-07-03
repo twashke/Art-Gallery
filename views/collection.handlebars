@@ -1,7 +1,12 @@
-
-
-<section class="container">
-    <div class="flex-row justify-center">
-        <p>Collection</p>
-    </div>
-</section>
+<div class="card-style">
+     {{#each arts as |art|}}
+          <article>
+               <a href=" /collection/{{art.id}}"><img src="{{art.img_url}}" class="card-img-top"
+                         alt="{{art.art_name}}"></a>
+               <h3>{{art.art_name}}</h3>
+               <p>Artist: {{art.artist_name}}</p>
+               <p>Price: {{art.price}}</p>
+               <a href="/collection/{{art.id}}" class="btn btn-primary">Details</a>
+          </article>
+     {{/each}}
+</div>

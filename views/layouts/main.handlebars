@@ -1,35 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>Happy Little Art Gallery</title>
-    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Laila:wght@300&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Happy Little Art Gallery</h1>
+            <h1 class="display-4 text-center focus-in-expand-fwd"><i class="fas fa-palette"></i>Happy Little Art
+                Gallery<i class="fas fa-paint-brush"></i></h1>
         </div>
     </div>
 
-    <nav class="nav nav-tabs">
-        <a class="nav-link active" href="/">Active</a>
-        <a class="nav-link" href="/dashboard">Dashboard</a>
-        <a class="nav-link" href="/collection">Collections</a>
-        {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        {{!-- <a class="navbar-brand " href="#">
+            <img src="/image/elephantlogo.png" width="100rem" height="100rem" alt=""><span style=" font-family: Roboto, sans-serif; color: yellowgreen ; font-size: 2.5
+    rem; ">Happy Little Art Gallery</span>
+        </a> --}}
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/collection">Collection</a>
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+                {{#if loggedIn}}
+                <a class="nav-link" id="logout" href="/logout">Logout</a>
+                {{else}}
+                <a class="nav-link" href="/login">Login</a>
+                {{/if}}
+            </div>
+        </div>
     </nav>
 
-    {{{body}}}
+    <br>
+    <br>
 
+    <div class="body">
+        {{{ body }}}
     </div>
+
+    <br>
+    <br>
+
+    <footer class="d-flex footer navbar">
+        <div class="container d-flex justify-content-center">
+            <span class="text-muted">Copyright <i class="far fa-copyright"></i> 2021 - (Kyle, Tiffany, Gunjan,
+                Tami)</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
+
 </html>

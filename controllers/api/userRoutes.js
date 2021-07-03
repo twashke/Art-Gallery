@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User } = require("../../models")
 
 router.post("/", async (req, res) => {
+    // console.log("Before try statement: ", res);
     try {
         const userData = await User.create(req.body);
 
@@ -10,13 +11,16 @@ router.post("/", async (req, res) => {
             req.session.logged_in = true;
 
             res.status(200).json(userData);
+            // console.log("In save statement: ", userData);
         });
     } catch (err) {
         res.status(400).json(err);
+        // console.log("Catch error: ", error);
     }
 });
 
 router.post("/login", async (req, res) => {
+    // console.log("Before try statement: ", res);
     try {
         const userData = await User.findOne({ where: { email: req.body.email} });
 
@@ -37,9 +41,11 @@ router.post("/login", async (req, res) => {
             req.session.logged_in = true;
 
             res.json({ user: userData, message: "You are now logged in, welcome to the Art Gallery"});
+            // console.log("In save statement: ", userData);
         });
     } catch(err) {
         res.status(400).json(err);
+        // console.log("Catch error: ", error);
     }
 });
 

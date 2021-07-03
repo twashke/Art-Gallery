@@ -1,7 +1,19 @@
+<div class="card-style">
+     {{#each arts as |art|}}
+          <article>
+               <a href=" /dashboard/{{art.id}}"><img src="{{art.img_url}}" class="card-img-top"
+                         alt="{{art.art_name}}"></a>
+               <h3>{{art.art_name}}</h3>
+               <p>Artist: {{art.artist_name}}</p>
+               <p>Price: {{art.price}}</p>
+               <form id="artdelete">
+                    <div class="form-group">
+                         <a href="/dashboard/{{art.id}}" class="btn btn-primary update">Update</a>
+                         <button type="submit" class="btn btn-primary">Delete</a>
+                    </div>
+               </form>
+          </article>
+     {{/each}}
+</div>
 
-
-<section class="container">
-    <div class="flex-row justify-center">
-        <p>Dashboard Page</p>
-    </div>
-</section>
+<script src="/js/deleteart.js"></script>

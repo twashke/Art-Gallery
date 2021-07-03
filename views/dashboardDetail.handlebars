@@ -1,0 +1,43 @@
+               <div class="col-sm-4 col-md-4 col-lg-4">
+                    <form id="artupdate">
+                         <div class="form-group">
+                              <label class="control-label" for="update-title">Title: </label>
+                              <input class="form-control" type="text" id="update-title" name="update-title">
+                         </div>
+                         <div class="form-group">
+                              <label class="control-label" for="update-technique">Technique: </label>
+                              <input class="form-control" type="text" id="update-technique" name="update-technique">
+                         </div>
+                         <div class="form-group">
+                              <label class="control-label" for="update-title">Dimensions: </label>
+                              <input class="form-control" type="text" id="update-dimensions" name="update-dimensions">
+                         </div>
+                         <div class="form-group">
+                              <label class="control-label" for="update-title">Price: </label>
+                              <input class="form-control" type="text" id="update-price" name="update-price">
+                         </div>
+                         <div class="form-group">
+                              <label class="control-label" for="update-title">Other Details: </label>
+                              <input class="form-control" type="text" id="update-otherdetails"
+                                   name="update-otherdetails">
+                         </div>
+                         <div>
+                              <p><button type="submit" class="btn btn-primary">Update</button></p>
+                         </div>
+                    </form>
+               </div>
+
+               <div class="col-sm-8 col-md-8 col-lg-8 align-self-center">
+                    <p><img src="{{det.img_url}}" class="card-img-top" alt="{{det.art_name}}"></p>
+                    Artist: {{det.artist_name}}<br>
+                    Title: {{det.art_name}}<br>
+                    Technique: {{det.technique}}<br>
+                    Dimensions: {{det.dimension}}<br>
+                    Price: {{det.price}}<br>
+                    Other Details: {{det.other_details}}<br>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script src="/js/updateart.js"></script>
