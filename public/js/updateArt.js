@@ -14,7 +14,7 @@ async function updateAnArt(event) {
   if (response.ok) {
     document.location.replace("/dashboard");
   } else {
-    alert("Failed to delete art");
+    alert("Failed to update an art");
   }
 }
 
