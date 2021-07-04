@@ -1,4 +1,4 @@
-async function newPostFormHandler(event) {
+async function newArtFormHandler(event) {
   event.preventDefault();
 
   const form = document.querySelector("#addArt");
@@ -17,6 +17,4 @@ async function newPostFormHandler(event) {
   }
 }
 
-document
-  .querySelector("#addArt")
-  .addEventListener("submit", newPostFormHandler);
+document.querySelector("#addArt").addEventListener("submit", newArtFormHandler);
