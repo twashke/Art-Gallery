@@ -13,15 +13,12 @@
 
 html {
   position: relative;
+  min-height: 100vh;
 }
 
 .container {
   /* max-width: 700px; */
   padding: 0 15px;
-}
-
-.login-signup-container {
-  min-width: 100vw;
 }
 
 .navbar {
@@ -38,7 +35,6 @@ html {
 .jumbotron {
   background-color: var(--sec);
   margin-bottom: 0;
-  min-height: 20vh;
 }
 
 .jumbotron h1 {
@@ -48,6 +44,7 @@ html {
 
 .pic-carousel-container {
   min-width: 50vw;
+  min-height: 50vh;
 }
 
 .pic-carousel {
@@ -67,6 +64,11 @@ html {
 
 .blockquote {
   font-size: 24px !important;
+}
+
+.login-signup-container {
+  min-width: 100vw;
+  min-height: 55vh;
 }
 
 .footer {
