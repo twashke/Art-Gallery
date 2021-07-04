@@ -114,8 +114,6 @@ This application is covered by the [MIT License](https://opensource.org/licenses
 - **Email directly at** gunjanb2006@gmail.com
 - **GitHub User Name:** [gunjanb](https://github.com/gunjanb)
 
-![Developer Profile Picture](https://avatars.githubusercontent.com/u/13214814?v=4)
-
 ## **Contact Kyle Canoy**
 
 - **Email directly at** kcanoy@uw.edu
