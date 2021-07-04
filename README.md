@@ -69,7 +69,7 @@ The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com
 - By clicking **Logout** the user is returned to the opening page.
 
 [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) Opening Page \
-![Login Page](public/images/opening-page.gif) \
+![Login Page](public/images/opening-page.gif)
 
 [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) **Login** to **Dashboard** \
 ![Login Page](public/images/dashboard-view.gif) \
@@ -78,7 +78,7 @@ Viewing the **Collection** tab for all User Artwork \
 ![Viewing Collections](public/images/collection-tab.gif) \
 \
 Add **Comments** on Artwork in the **Details** section \
-![Add Comments to Art](public/images/add-comment-details.gif) \
+![Add Comments to Art](public/images/add-comment-details.gif)
 
 **Logout** of [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) \
 ![Add Comments to Art](public/images/logout.gif)
