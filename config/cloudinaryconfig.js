@@ -3,15 +3,26 @@ const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
+if (process.env.NODE_ENV === "production") {
+  cloudinary.config({
+    CLOUDINARY_URL: process.env.CLOUDINARY_URL,
+    cloud_name: process.env.cloud_name,
+    api_key: process.env.api_key,
+    api_secret: process.env.api_secret,
+  });
+} else {
+  cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET,
+  });
+}
 //configuration for cloundinary
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
-  cloudinary_url: process.env.CLOUDINARY_URL,
-});
-
-
+// cloudinary.config({
+//   cloud_name: process.env.CLOUD_NAME,
+//   api_key: process.env.API_KEY,
+//   api_secret: process.env.API_SECRET,
+// });
 //storage
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
@@ -20,7 +31,5 @@ const storage = new CloudinaryStorage({
     allowedFormats: ["jpg", "png"],
   },
 });
-
 const artUpload = multer({ storage: storage });
-
 module.exports = artUpload;
