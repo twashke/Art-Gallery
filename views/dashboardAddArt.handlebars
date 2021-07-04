@@ -5,28 +5,30 @@
                     <form id="addArt" method="POST" enctype="multipart/form-data">
                          <div class="mb-3">
                               <label for="formFile" class="form-label">Select image to upload</label>
-                              <input class="form-control" type="file" id="formFile">
+                              <input class="form-control" type="file" id="formFile" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Title: </label>
-                              <input class="form-control" type="text" id="update-title" name="update-title">
+                              <input class="form-control" type="text" id="update-title" name="update-title" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-technique">Technique: </label>
-                              <input class="form-control" type="text" id="update-technique" name="update-technique">
+                              <input class="form-control" type="text" id="update-technique" name="update-technique"
+                                   placeholder="i.e Pen and Ink" required>
                          </div>
                          <div class="form-group">
-                              <label class="control-label" for="update-title">Dimensions: </label>
-                              <input class="form-control" type="text" id="update-dimensions" name="update-dimensions">
+                              <label class="control-label" for="update-dimensions">Dimensions: </label>
+                              <input class="form-control" type="text" id="update-dimensions" name="update-dimensions"
+                                   required>
                          </div>
                          <div class="form-group">
-                              <label class="control-label" for="update-title">Price: </label>
-                              <input class="form-control" type="text" id="update-price" name="update-price">
+                              <label class="control-label" for="update-price">Price: </label>
+                              <input class="form-control" type="text" id="update-price" name="update-price" required>
                          </div>
                          <div class="form-group">
-                              <label class="control-label" for="update-title">Other Details: </label>
+                              <label class="control-label" for="update-otherdetails">Other Details: </label>
                               <input class="form-control" type="text" id="update-otherdetails"
-                                   name="update-otherdetails">
+                                   name="update-otherdetails" required>
                          </div>
                          <div>
                               <p><button id="addArt" type="submit" class="btn btn-primary">Upload!</button></p>
