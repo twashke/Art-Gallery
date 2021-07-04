@@ -3,7 +3,7 @@
 [![Badge](https://img.shields.io/badge/GitHub-FettBoba-green?style=flat-square&logo=appveyor)](https://github.com/Fett-Boba)
 [![Badge](https://img.shields.io/badge/GitHub-twashke-blueviolet?style=flat-square&logo=appveyor)](https://github.com/twashke) [![Badge](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
 
-# The Happy Little Art Gallery
+# Happy Little Art Gallery
 
 The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) was created for budding artists who want to find inspiration from other artists, or showcase their own work. After **Sign Up** the user is taken to their own **Dashboard** where they can begin posting their own pictures. The **Collection** tab will allow the user to see all of the art currently being displayed by all other users. By clicking on the **Details** button, information about the art is displayed, including a section for the user to provide feedback on the art. The **Purchase now** button allows the user the ability to purchase the artwork from the artist. The dashboard and collection are only avaialble to users that are currently logged in. Once the user is done, they can use the **Logout** tab to return to the oepning page of the website. The user can return to the dashboard or the collections page by using the **Login** tab to enter their login information again for access to the website.
 
