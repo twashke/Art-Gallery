@@ -80,6 +80,9 @@ Viewing the **Collection** tab for all User Artwork \
 Add **Comments** on Artwork in the **Details** section \
 ![Add Comments to Art](public/images/add-comment-details.gif) \
 
+**Logout** of [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) \
+![Add Comments to Art](public/images/logout.gif)
+
 ## Contributing
 
 - [Gunjan Bhargava](#Contact-Gunjun-Bhargava)
