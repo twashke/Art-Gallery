@@ -2,35 +2,40 @@
      <div class="container-fluid">
           <div class="row justify-content-center">
                <div class="col-sm-8 col-md-8 col-lg-8 align-self-center">
-                    <form id="addArt" method="POST" enctype="multipart/form-data">
-                         <div class="mb-3">
-                              <label for="formFile" class="form-label">Select image to upload</label>
-                              <input class="form-control" type="file" id="formFile">
+                    <form id="addArt" >
+  
+                         <div class="form-group">
+                              <label class="control-label" for="update-title">Title: </label>
+                              <input class="form-control" type="text" id="update-title" name="art_name">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Title: </label>
-                              <input class="form-control" type="text" id="update-title" name="update-title">
+                              <input class="form-control" type="text" id="update-title" name="artist_name">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-technique">Technique: </label>
-                              <input class="form-control" type="text" id="update-technique" name="update-technique">
+                              <input class="form-control" type="text" id="update-technique" name="technique">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Dimensions: </label>
-                              <input class="form-control" type="text" id="update-dimensions" name="update-dimensions">
+                              <input class="form-control" type="text" id="update-dimensions" name="dimension">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Price: </label>
-                              <input class="form-control" type="text" id="update-price" name="update-price">
+                              <input class="form-control" type="text" id="update-price" name="price">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Other Details: </label>
-                              <input class="form-control" type="text" id="update-otherdetails"
-                                   name="update-otherdetails">
+                              <input class="form-control" type="text" id="other_details"
+                                   name="other_details">
+                         </div>
+                          <div class="mb-3">
+                              <label for="formFile" class="form-label">Select image to upload</label>
+                              <input class="form-control-file" type="file" id="formFile" name="myimage" accept="images/*" required >
+
                          </div>
                          <div>
-                              <p><button id="addArt" type="submit" class="btn btn-primary">Upload!</button></p>
-                              {{!-- <p><a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a></p> --}}
+                              <p><button  type="submit" class="btn btn-primary">Upload!</button></p>
                          </div>
                     </form>
                </div>
