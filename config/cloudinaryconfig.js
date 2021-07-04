@@ -3,9 +3,6 @@ const multer = require("multer");
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
-if (process.env.CLOUDINARY_URL) {
-  cloudinary.config(process.env.CLOUDINARY_URL)
-} else {
 //configuration for cloundinary
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -13,7 +10,7 @@ cloudinary.config({
   api_secret: process.env.API_SECRET,
   cloudinary_url= process.env.CLOUDINARY_URL
 });
-};
+
 
 //storage
 const storage = new CloudinaryStorage({
