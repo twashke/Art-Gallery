@@ -161,4 +161,7 @@ router.get("/success", (req, res) => {
   );
 });
 
+router.get("/cancel", (req, res) =>
+  res.render("cancel", { layout: "successmain" })
+);
 module.exports = router;
