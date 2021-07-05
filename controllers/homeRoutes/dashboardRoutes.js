@@ -2,7 +2,6 @@ const router = require("express").Router();
 const { Art, User, Comment } = require("../../models/");
 const withAuth = require("../../utils/auth");
 
-// /dashboard get all the arts by user
 router.get("/", withAuth, async (req, res) => {
      try {
           const userArtDetails = await User.findOne({
@@ -13,7 +12,6 @@ router.get("/", withAuth, async (req, res) => {
                include: [
                     {
                          model: Art,
-                         // attributes: ["id", "img_url", "art_name"],
                          attributes: ["id", "img_url", "art_name", "technique", "dimension", "price", "other_details"],
                     },
                ],
@@ -32,7 +30,6 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 router.get("/add", (req, res) => {
-     // res.render("addArt", {
      res.render("dashboardAddArt", {
           loggedIn: true,
      });
@@ -41,7 +38,6 @@ router.get("/add", (req, res) => {
 router.get("/update/:id", async (req, res) => {
      const artDetails = await Art.findByPk(req.params.id);
      const art = artDetails.get({ plain: true });
-     // res.render("updateArt", { art, loggedIn: true }); 
      res.render("dashboardDetail", { art, loggedIn: true });
 });
 module.exports = router;
