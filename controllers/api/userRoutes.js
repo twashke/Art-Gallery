@@ -67,4 +67,65 @@ router.post("/logout", (req, res) => {
   }
 });
 
+var amountForArt;
+var productPrice;
+
+router.post("/pay", (req, res) => {
+  console.log(req.body.artname, req.body.artprice);
+  amountForArt = parseFloat(req.body.artprice).toFixed(2);
+  console.log(typeof amountForArt);
+  console.log("@@@@@@@@@@@@@@@@@@@@@@@@@total", amountForArt);
+
+  const create_payment_json = {
+    intent: "sale",
+    payer: {
+      payment_method: "paypal",
+    },
+    redirect_urls: {
+      // return_url: "https://paypalnode.herokuapp.com/success",
+      return_url: "http://localhost:3001/api/users/success",
+      //cancel_url: "https://paypalnode.herokuapp.com/cancel",
+      cancel_url: "http://localhost:3001/api/users/cancel",
+    },
+    transactions: [
+      {
+        item_list: {
+          items: [
+            {
+              name: req.body.artname,
+              sku: "001",
+              price: amountForArt,
+              currency: "USD",
+              quantity: 1,
+            },
+          ],
+        },
+        amount: {
+          currency: "USD",
+          total: amountForArt,
+        },
+        description: "Art work",
+      },
+    ],
+  };
+  console.log(create_payment_json);
+  productPrice = { totalamount: amountForArt };
+  console.log(productPrice.totalamount);
+  paypal.payment.create(create_payment_json, function (error, payment) {
+    if (error) {
+      console.log(error);
+      throw error;
+    } else {
+      console.log(payment);
+      for (let i = 0; i < payment.links.length; i++) {
+        if (payment.links[i].rel === "approval_url") {
+          console.log(i);
+          console.log(payment.links[i].href);
+          res.status(200).json({ togo: payment.links[i].href });
+        }
+      }
+    }
+  });
+});
+
 module.exports = router;
