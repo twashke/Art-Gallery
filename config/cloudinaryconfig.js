@@ -1,17 +1,15 @@
 require("dotenv").config();
 const multer = require("multer");
-const cloudinary = require("cloudinary").v2;
+const Cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
-if (process.env.NODE_ENV === "production") {
-  cloudinary.config({
-    CLOUDINARY_URL: process.env.CLOUDINARY_URL,
-    cloud_name: process.env.cloud_name,
-    api_key: process.env.api_key,
-    api_secret: process.env.api_secret,
-  });
+let cloudinary;
+
+if (process.env.CLOUDINARY_URL) {
+  cloudinary = new Cloudinary(process.env.CLOUDINARY_URL);
+  
 } else {
-  cloudinary.config({
+  cloudinary = new Cloudinary ({
     cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.API_KEY,
     api_secret: process.env.API_SECRET,
