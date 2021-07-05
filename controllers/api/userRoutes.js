@@ -128,4 +128,37 @@ router.post("/pay", (req, res) => {
   });
 });
 
+router.get("/success", (req, res) => {
+  const payerId = req.query.PayerID;
+  const paymentId = req.query.paymentId;
+  console.log("********", req.body);
+  console.log(amountForArt);
+  console.log("@@@@@@@@@@@@@@@@@@", productPrice.totalamount);
+  const execute_payment_json = {
+    payer_id: payerId,
+    transactions: [
+      {
+        amount: {
+          currency: "USD",
+          total: productPrice.totalamount,
+        },
+      },
+    ],
+  };
+
+  paypal.payment.execute(
+    paymentId,
+    execute_payment_json,
+    function (error, payment) {
+      if (error) {
+        console.log(error.response);
+        throw error;
+      } else {
+        console.log(JSON.stringify(payment));
+        res.render("success", { layout: "successmain" });
+      }
+    }
+  );
+});
+
 module.exports = router;
