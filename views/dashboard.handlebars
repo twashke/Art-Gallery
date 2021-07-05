@@ -1,7 +1,7 @@
 <div id="addnewart" class="card-style-center">
-     <p>Welcome to the dashboard! This is where you can manage your masterpieces by adding,
-          changing, and deleting artwork. When uploading be sure to use .jpg or .png images.</p>
-     <p><a href="/dashboard/add" class="btn btn-primary">Add New Art</a></p>
+     Welcome to the dashboard! This is where you can manage your masterpieces by adding,
+     changing, and deleting artwork. When uploading be sure to use .jpg or .png images.<br><br>
+     <a href="/dashboard/add" class="btn btn-primary">Add New Art</a>
 </div>
 
 {{#if userArts.arts.length}}
@@ -13,7 +13,7 @@
                     <h3>{{art_name}}</h3>
                     Technique: {{technique}}<br>
                     Dimensions: {{dimension}}<br>
-                    Price: {{price}}
+                    Price: $ {{price}}
                     <form id="artdelete">
                          <div class="form-group">
                               <a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a>
