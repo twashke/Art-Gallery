@@ -155,13 +155,13 @@ router.get("/success", (req, res) => {
         throw error;
       } else {
         console.log(JSON.stringify(payment));
-        res.render("success", { layout: "successmain" });
+        res.render("success", { layout: "buyresponse" });
       }
     }
   );
 });
 
 router.get("/cancel", (req, res) =>
-  res.render("cancel", { layout: "successmain" })
+  res.render("cancel", { layout: "buyresponse" })
 );
 module.exports = router;
