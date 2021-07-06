@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 const paypal = require("paypal-rest-sdk");
-//const paypalsandbox = require("../../config/key");
+var amountForArt;
 paypal.configure({
   mode: "sandbox", //sandbox
   client_id: process.env.CLIENT_ID,
@@ -67,24 +67,15 @@ router.post("/logout", (req, res) => {
   }
 });
 
-var amountForArt;
-var productPrice;
-
 router.post("/pay", (req, res) => {
-  console.log(req.body.artname, req.body.artprice);
   amountForArt = parseFloat(req.body.artprice).toFixed(2);
-  console.log(typeof amountForArt);
-  console.log("@@@@@@@@@@@@@@@@@@@@@@@@@total", amountForArt);
-
   const create_payment_json = {
     intent: "sale",
     payer: {
       payment_method: "paypal",
     },
     redirect_urls: {
-      // return_url: "https://paypalnode.herokuapp.com/success",
       return_url: "http://localhost:3001/api/users/success",
-      //cancel_url: "https://paypalnode.herokuapp.com/cancel",
       cancel_url: "http://localhost:3001/api/users/cancel",
     },
     transactions: [
@@ -108,9 +99,7 @@ router.post("/pay", (req, res) => {
       },
     ],
   };
-  console.log(create_payment_json);
-  productPrice = { totalamount: amountForArt };
-  console.log(productPrice.totalamount);
+
   paypal.payment.create(create_payment_json, function (error, payment) {
     if (error) {
       console.log(error);
@@ -131,16 +120,13 @@ router.post("/pay", (req, res) => {
 router.get("/success", (req, res) => {
   const payerId = req.query.PayerID;
   const paymentId = req.query.paymentId;
-  console.log("********", req.body);
-  console.log(amountForArt);
-  console.log("@@@@@@@@@@@@@@@@@@", productPrice.totalamount);
   const execute_payment_json = {
     payer_id: payerId,
     transactions: [
       {
         amount: {
           currency: "USD",
-          total: productPrice.totalamount,
+          total: amountForArt,
         },
       },
     ],
