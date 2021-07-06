@@ -2,18 +2,20 @@
      <div class="container-fluid ">
           <div class="row">
                <div class="col-sm-7 col-md-7 col-lg-8">
-                    <p><img src="{{artDetailsForId.img_url}}" class="card-img-top" alt="{{artDetailsForId.art_name}}">
+                    <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
+                              alt="{{artDetailsForId.art_name}}">
                     </p>
                     {{#if artDetailsForId.comments.length}}
                          {{> comments artDetailsForId.comments}}
                     {{/if}}
                </div>
                <div class="col-sm-5 col-md-5 col-lg-4">
-                    <p><a href="/buyme{{art.id}}" class="btn btn-primary update">Purchase now</a></p>
+                    </p><button class="btn btn-primary update paybutton" data-name="{{artDetailsForId.art_name}}"
+                    data-price="{{artDetailsForId.price}}">Purchase now</button></p>
                     Artist: {{artDetailsForId.artist_name}}<br>
                     Title: {{artDetailsForId.art_name}}<br Technique: {{artDetailsForId.technique}}<br>
                     Dimensions: {{artDetailsForId.dimension}}<br>
-                    Price: {{artDetailsForId.price}}<br>
+                    Price: $ {{artDetailsForId.price}}<br>
                     Other Details: {{artDetailsForId.other_details}}<br>
                     <form id="comment-form">
                          <div class="form-group">
@@ -27,5 +29,6 @@
      </div>
 </div>
 
-<script src="/js/addcomment.js"></script>
 
+<script src="/js/addcomment.js"></script>
+<script src="/js/buyart.js"></script>
