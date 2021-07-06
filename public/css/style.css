@@ -125,3 +125,31 @@ input[type="file"] {
 .form-btn-center {
   text-align: center;
 }
+
+.custom-success-top {
+  height: 50vh;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-icon {
+  font-size: 10rem;
+  color: rgb(31, 29, 29);
+}
+
+.success-page-button {
+  border-radius: 2rem;
+  border: 1px solid black;
+}
+
+.custom-success-body {
+  background-color: cornflowerblue;
+}
+
+/* .footer {
+  width: 100%;
+  background-color: var(--dark);
+  font-family: "Laila", sans-serif !important;
+  font-size: 24px !important;
+} */
