@@ -15,7 +15,6 @@ module.exports = {
           var urlb = "c_thumb,w_300,g_face/";
           var urlc = url.substr(50, url.length);
           var newurl = urla.concat(urlb).concat(urlc);
-          //console.log(newurl);
           return newurl;
      },
 };
