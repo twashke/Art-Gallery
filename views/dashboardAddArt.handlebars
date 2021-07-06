@@ -8,7 +8,7 @@
                          <div class="form-group form-btn-center">
                               <label for="file-upload" class="custom-file-upload btn btn-primary">Select File to
                                    Upload</label>
-                              <input id="file-upload" type="file" onchange="showname()" name="myimage" />
+                              <input id="file-upload" type="file" onchange="showname()" name="myimage" required />
                               <p>
                               <div id="file-selected">Files must be .jpg or .png</div>
                               </p>
@@ -17,26 +17,27 @@
                          <div class="form-group">
                               <label class="control-label" for="update-title">Title: </label>
                               <input class="form-control" type="text" id="update-title" name="art_name"
-                                   placeholder="i.e. My Masterpiece (required)" required>
+                                   placeholder="i.e. Starry Night (required)" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Artist: </label>
-                              <input class="form-control" type="text" id="update-title" name="artist_name">
+                              <input class="form-control" type="text" id="update-title" name="artist_name"
+                                   placeholder="i.e. Van Gogh (required)" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-technique">Technique: </label>
                               <input class="form-control" type="text" id="update-technique" name="technique"
-                                   placeholder="i.e. Pen and Ink (required)">
+                                   placeholder="i.e. Pen and Ink (required)" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Dimensions: </label>
                               <input class="form-control" type="text" id="update-dimensions" name="dimension"
-                                   placeholder="i.e. 8x10 (required)">
+                                   placeholder="i.e. 8x10 (required)" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Price: </label>
                               <input class="form-control" type="number" id="update-price" name="price"
-                                   placeholder="i.e. 50.00 (required)">
+                                   placeholder="i.e. 50.00 (required)" required>
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Other Details: </label>

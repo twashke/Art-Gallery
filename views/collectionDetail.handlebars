@@ -2,7 +2,8 @@
      <div class="container-fluid ">
           <div class="row">
                <div class="col-sm-7 col-md-7 col-lg-8">
-                    <p><img src="{{artDetailsForId.img_url}}" class="card-img-top" alt="{{artDetailsForId.art_name}}">
+                    <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
+                              alt="{{artDetailsForId.art_name}}">
                     </p>
                     {{#if artDetailsForId.comments.length}}
                          {{> comments artDetailsForId.comments}}
@@ -14,7 +15,7 @@
                     Artist: {{artDetailsForId.artist_name}}<br>
                     Title: {{artDetailsForId.art_name}}<br Technique: {{artDetailsForId.technique}}<br>
                     Dimensions: {{artDetailsForId.dimension}}<br>
-                    Price: {{artDetailsForId.price}}<br>
+                    Price: $ {{artDetailsForId.price}}<br>
                     Other Details: {{artDetailsForId.other_details}}<br>
                     <form id="comment-form">
                          <div class="form-group">
@@ -27,6 +28,7 @@
           </div>
      </div>
 </div>
+
 
 <script src="/js/addcomment.js"></script>
 <script src="/js/buyart.js"></script>
