@@ -6,44 +6,42 @@
                     <form id="updateart">
                          <div class="form-group">
                               <label class="control-label" for="update-title">Title: </label>
-                              <input class="form-control" type="text" id="update-title" name="art_name" value="{{art.art_name}}">
+                              <input class="form-control" type="text" id="update-title" name="art_name"
+                                   value="{{art.art_name}}">
                          </div>
-                          <div class="form-group">
+                         <div class="form-group">
                               <label class="control-label" for="update-title">Artist: </label>
-                              <input class="form-control" type="text" id="update-title" name="artist_name" value="{{art.artist_name}}">
+                              <input class="form-control" type="text" id="update-title" name="artist_name"
+                                   value="{{art.artist_name}}">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-technique">Technique: </label>
-                              <input class="form-control" type="text" id="update-technique" name="technique" value="{{art.technique}}">
+                              <input class="form-control" type="text" id="update-technique" name="technique"
+                                   value="{{art.technique}}">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Dimensions: </label>
-                              <input class="form-control" type="text" id="update-dimensions" name="dimension" value="{{art.dimension}}">
+                              <input class="form-control" type="text" id="update-dimensions" name="dimension"
+                                   value="{{art.dimension}}">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Price: </label>
-                              <input class="form-control" type="text" id="update-price" name="price"  value="{{art.price}}">
+                              <input class="form-control" type="text" id="update-price" name="price"
+                                   value="{{art.price}}">
                          </div>
                          <div class="form-group">
                               <label class="control-label" for="update-title">Other Details: </label>
-                              <input class="form-control" type="text" id="other_details"
-                                   name="other_details" value="{{art.other_details}}">
+                              <input class="form-control" type="text" id="other_details" name="other_details"
+                                   value="{{art.other_details}}">
                          </div>
                          <div>
-                              <p><button  type="submit" class="btn btn-primary">Update</button></p>
-                              {{!-- <p><a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a></p> --}}
+                              <p><button type="submit" class="btn btn-primary">Update</button></p>
                          </div>
                     </form>
                </div>
 
                <div class="col-sm-8 col-md-8 col-lg-8 align-self-center">
                     <p><img src="{{art.img_url}}" class="card-img-top" alt="{{art.art_name}}"></p>
-                    {{!-- Artist: {{art.artist_name}}<br>
-                    Title: {{art.art_name}}<br>
-                    Technique: {{art.technique}}<br>
-                    Dimensions: {{art.dimension}}<br>
-                    Price: {{art.price}}<br>
-                    Other Details: {{art.other_details}}<br> --}}
                </div>
           </div>
      </div>
