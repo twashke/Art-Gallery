@@ -5,7 +5,7 @@
 
 # Happy Little Art Gallery
 
-The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) was created for budding artists who want to find inspiration from other artists, or showcase their own work. After **Sign Up** the user is taken to their own **Dashboard** where they can begin posting their own pictures. The **Collection** tab will allow the user to see all of the art currently being displayed by all other users. By clicking on the **Details** button, information about the art is displayed, including a section for the user to provide feedback on the art. The **Purchase now** button allows the user the ability to purchase the artwork from the artist. The dashboard and collection are only avaialble to users that are currently logged in. Once the user is done, they can use the **Logout** tab to return to the oepning page of the website. The user can return to the dashboard or the collections page by using the **Login** tab to enter their login information again for access to the website.
+The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) was created for budding artists who want to find inspiration from other artists, or showcase their own work. After **Sign Up** the user is taken to their own **Dashboard** where they can begin showcasing their own art by using the **Add New Art** button. The **Collection** tab will allow the user to see all of the art currently being displayed by all other users (including their own). By clicking on the **Details** button, information about the art is displayed, including a section for the user to provide feedback on the art through a comment section. The **Purchase now** button allows the user the ability to purchase the artwork from the artist through PayPal. The dashboard and collection are only avaialble to users that are currently logged in. Once the user is done, they can use the **Logout** tab to return to the opening page of the website. The user can return to the dashboard or the collections page by using the **Login** tab to enter their login information again for access to the website.
 
 **_"Talent is a pursued interest. Anything that you are willing to practice, you can do." - Bob Ross_**
 
@@ -22,10 +22,12 @@ The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com
 ## About the Project
 
 - The motivation for this project is to create a place for a user to view, provide feedback, and even sell their art to other users.
-- This website requires the user to sign in to view their own personal **Dashboard** to post and view comments on their art.
-- Once logged in, the user has access to the **Collections** tab where they can view all of the art from all other users.
+- This website requires the user to sign in to view their own personal **Dashboard** to post and showcase their own art.
+- Using the **Add New Art** button the user can post their own picture and include all of the details about the art.
+- Using the **Collections** tab the user can view all of the art that has been posted.
 - In the **Details** portion of art, the user can leave comments or feedback on other artist's work.
-- Once the user is done, they can use the **Logout** tab to return to the opening page of the websire.
+- Clicking the **Purchase now** button users are directed to Paypal to pay the seller for their art.
+- Once the user is done, they can use the **Logout** tab to return to the opening page of the website.
 - Built with the following technologies:
   - [nodemon](https://www.npmjs.com/package/nodemon)
   - [path](https://www.npmjs.com/package/path)
@@ -40,6 +42,7 @@ The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com
   - [multer](https://www.npmjs.com/package/multer)
   - [cloudinary](https://www.npmjs.com/package/cloudinary)
   - [multer-storage-cloudinary](https://www.npmjs.com/package/multer-storage-cloudinary)
+  - [paypal-rest-sdk](https://www.npmjs.com/package/paypal-rest-sdk)
   - [HTML](https://www.w3schools.com/html/), [CSS](https://www.w3.org/Style/CSS/Overview.en.html), and [Javascript](https://www.javascript.com/)
   - [Bootstrap](https://getbootstrap.com/)
   - [Google Fonts](https://fonts.google.com/)
@@ -62,26 +65,36 @@ The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com
 - Use the **Login** tab to **Sign Up**
 - Enter **Username**, **Email**, and **Password**
 - The user is directed to their personal **Dashboard**
+- To add art, click the **Add New Art** button and enter details and choose the art to upload.
 - From their they can add pictures or view comments on their pictures.
 - The **Collections** tab allows the user to view all other art on the website to view, comment, and purchase through the user.
 - Clicking on the **Details** button allows the user to view more information about the art.
-- Click on the **Purchase now** button allows the user to contact the seller to buy the art.
+- Click on the **Purchase now** button directs the user to paypal to purchase the seller's art.
 - By clicking **Logout** the user is returned to the opening page.
 
-[Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) Opening Page \
-![Login Page](public/images/opening-page.gif)
-
-[Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) **Login** to **Dashboard** \
-![Login Page](public/images/dashboard-view.gif) \
+[Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) **Home**, **Sign Up** and **Login** to **Dashboard** \
+![Home, Sign Up and Login Page](public/images/home-login-signup.gif) \
 \
-Viewing the **Collection** tab for all User Artwork \
-![Viewing Collections](public/images/collection-tab.gif) \
+Updating Art on **Dashboard** \
+![Viewing Collections](public/images/update-art-details.gif) \
+\
+Remove Art Using the **Delete** button \
+![Delete Art](public/images/delete-art.gif) \
+\
+Viewing the **Collection** tab for all User Artwork and to see comments \
+![Viewing Collections](public/images/collections-tab.gif) \
 \
 Add **Comments** on Artwork in the **Details** section \
-![Add Comments to Art](public/images/add-comment-details.gif)
-
+![Add Comments to Art](public/images/add-comment.gif) \
+\
+Use the **Purchase now** button in the **Details** section to purchase through [PayPal](https://www.paypal.com/us/home) \
+![Purchase through PayPal](public/images/purchase-paypal.gif) \
+\
 **Logout** of [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com/) \
-![Add Comments to Art](public/images/logout.gif)
+![Logout of Website](public/images/logout.gif) \
+\
+Contact Information in Footer \
+![Footer Contact Information](public/images/footer-contact-info.gif)
 
 ## Contributing
 
@@ -94,6 +107,7 @@ Add **Comments** on Artwork in the **Details** section \
 
 - Testing was done throughout the project development by using **git pull origin develop** as new files were merged in github.
 - Each round of new files included vigourous testing to ensure everything was connecting properly and working as intended.
+- Insomnia was used to test all API routes.
 
 ## License
 
