@@ -63,4 +63,3 @@ VALUE ("Mando Mondays... Dent looks great, and mask does not appear to be heavil
 INSERT INTO comment (text, user_id, art_id)
 VALUE ("Would love to see a version of this on a black background.",2,9);
 
-

@@ -2,16 +2,18 @@
      <div class="container-fluid ">
           <div class="row">
                <div class="col-sm-7 col-md-7 col-lg-8">
-                    <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
-                              alt="{{artDetailsForId.art_name}}">
-                    </p>
-                    {{#if artDetailsForId.comments.length}}
-                         {{> comments artDetailsForId.comments}}
-                    {{/if}}
+                    <div class="container">
+                         <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
+                                   alt="{{artDetailsForId.art_name}}">
+                         </p>
+                         {{#if artDetailsForId.comments.length}}
+                              {{> comments artDetailsForId.comments}}
+                         {{/if}}
+                    </div>
                </div>
                <div class="col-sm-5 col-md-5 col-lg-4">
                     </p><button class="btn btn-primary update paybutton" data-name="{{artDetailsForId.art_name}}"
-                    data-price="{{artDetailsForId.price}}">Purchase now</button></p>
+                         data-price="{{artDetailsForId.price}}">Purchase now</button></p>
                     Artist: {{artDetailsForId.artist_name}}<br>
                     Title: {{artDetailsForId.art_name}}<br Technique: {{artDetailsForId.technique}}<br>
                     Dimensions: {{artDetailsForId.dimension}}<br>
@@ -28,7 +30,6 @@
           </div>
      </div>
 </div>
-
 
 <script src="/js/addcomment.js"></script>
 <script src="/js/buyart.js"></script>
