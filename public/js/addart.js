@@ -31,5 +31,5 @@ $(".load1").click(function () {
 
   setTimeout(function () {
     $(_this).html(existingHTML).prop("disabled", false); 
-  }, 15000); 
+  }, 10000); 
 });
