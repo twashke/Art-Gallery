@@ -3,12 +3,9 @@
           <div class="row">
                <div class="col-sm-7 col-md-7 col-lg-8">
                     <div class="container">
-                         <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
+                         <p><img src="{{artDetailsForId.img_url}}" class="card-img-top"
                                    alt="{{artDetailsForId.art_name}}">
                          </p>
-                         {{#if artDetailsForId.comments.length}}
-                              {{> comments artDetailsForId.comments}}
-                         {{/if}}
                     </div>
                </div>
                <div class="col-sm-5 col-md-5 col-lg-4">
@@ -26,6 +23,15 @@
                               <button type="submit" class="btn btn-primary load1">Add Comment</button>
                          </div>
                     </form>
+               </div>
+          </div>
+          <div class="row">
+               <div class="col-sm-7 col-md-7 col-lg-8">
+                    <div class="container">
+                         {{#if artDetailsForId.comments.length}}
+                              {{> comments artDetailsForId.comments}}
+                         {{/if}}
+                    </div>
                </div>
           </div>
      </div>
