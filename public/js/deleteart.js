@@ -1,7 +1,6 @@
 async function deleteAnArt(event) {
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
-    // console.log("@@@@@@@@@@@@@@@@@@@@@@@", id);
     const response = await fetch(`/api/arts/${id}`, {
       method: "DELETE",
     });
@@ -14,5 +13,4 @@ async function deleteAnArt(event) {
   }
 }
 
-// document.querySelector("#deleteart").addEventListener("click", deleteAnArt);
 document.querySelector("#allartsbyuser").addEventListener("click", deleteAnArt);
