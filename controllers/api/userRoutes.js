@@ -109,11 +109,8 @@ router.post("/pay", (req, res) => {
       console.log(error);
       throw error;
     } else {
-      console.log(payment);
       for (let i = 0; i < payment.links.length; i++) {
         if (payment.links[i].rel === "approval_url") {
-          console.log(i);
-          console.log(payment.links[i].href);
           res.status(200).json({ togo: payment.links[i].href });
         }
       }
@@ -144,7 +141,6 @@ router.get("/success", (req, res) => {
         console.log(error.response);
         throw error;
       } else {
-        console.log(JSON.stringify(payment));
         res.render("success", { layout: "buyresponse" });
       }
     }
