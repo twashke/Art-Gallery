@@ -5,24 +5,26 @@
 </div>
 
 {{#if userArts.arts.length}}
-     <div id="allartsbyuser" class="card-style">
-          {{#each userArts.arts}}
-               <article>
-                    <a href="/dashboard/update/{{id}}"><img src="{{thumbnail img_url}}" class="card-img-top"
-                              alt="{{art_name}}"></a>
-                    <h3>{{art_name}}</h3>
-                    Technique: {{technique}}<br>
-                    Dimensions: {{dimension}}<br>
-                    Price: $ {{price}}
-                    <form id="artdelete">
-                         <div class="form-group">
-                              <a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a>
-                              <button id="deleteart" data-id="{{id}}" type="submit" class="btn btn-primary">Delete</a>
-                         </div>
-                    </form>
-               </article>
-          {{/each}}
-     </div>
+<div id="allartsbyuser" class="card-style">
+     {{#each userArts.arts}}
+     <article>
+          <a href="/dashboard/update/{{id}}"><img src="{{thumbnail img_url}}" class="card-img-top"
+                    alt="{{art_name}}"></a>
+          <h3>{{art_name}}</h3>
+          Technique: {{technique}}<br>
+          Dimensions: {{dimension}}<br>
+          Price: $ {{price}}
+          <form id="artdelete">
+               <div class="form-group">
+                    <a href="/dashboard/update/{{id}}" class="btn btn-primary">Update</a>
+                    <button id="deleteart" data-id="{{id}}" type="submit" class="btn btn-primary load1">Delete</a>
+               </div>
+          </form>
+     </article>
+     {{/each}}
+</div>
 {{/if}}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="/js/deleteart.js"></script>
