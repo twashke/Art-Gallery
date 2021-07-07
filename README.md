@@ -108,6 +108,7 @@ Contact Information in Footer \
 - Testing was done throughout the project development by using **git pull origin develop** as new files were merged in github.
 - Each round of new files included vigourous testing to ensure everything was connecting properly and working as intended.
 - Insomnia was used to test all API routes.
+- Multiple deployments using both develop and main branch in Heroku
 
 ## License
 
