@@ -4,6 +4,7 @@
   --dark: #343a40;
   --font: #4d3a33;
   --finger: pointer;
+  --black: #000000;
 }
 
 * {
@@ -21,7 +22,7 @@ html {
 
 .navbar {
   width: 100%;
-  background-color: var(--dark);
+  background-color: var(--black);
   font-family: "Laila", sans-serif !important;
   font-size: 24px !important;
 }
@@ -73,7 +74,6 @@ html {
   color: var(--sec);
 }
 
-/* Begin card styling */
 article {
   padding: 20px;
   border: 1px solid #999;
@@ -118,7 +118,6 @@ article {
   border-radius: 5px;
 }
 
-/* Begin form input=file styling */
 input[type="file"] {
   display: none;
 }
@@ -147,9 +146,14 @@ input[type="file"] {
   background-color: cornflowerblue;
 }
 
-/* .footer {
+.footer {
   width: 100%;
   background-color: var(--dark);
   font-family: "Laila", sans-serif !important;
   font-size: 24px !important;
-} */
+}
+
+.card-hover img:hover {
+  box-shadow: inset 0px 0px 8px #6ba0b4, 0 0 15px rgb(16, 164, 233);
+  transform: scale(1.1);
+}
