@@ -2,16 +2,18 @@
      <div class="container-fluid ">
           <div class="row">
                <div class="col-sm-7 col-md-7 col-lg-8">
-                    <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
-                              alt="{{artDetailsForId.art_name}}">
-                    </p>
-                    {{#if artDetailsForId.comments.length}}
-                         {{> comments artDetailsForId.comments}}
-                    {{/if}}
+                    <div class="container">
+                         <p><img width="" id="imageid" src="{{artDetailsForId.img_url}}" class="card-img-top"
+                                   alt="{{artDetailsForId.art_name}}">
+                         </p>
+                         {{#if artDetailsForId.comments.length}}
+                              {{> comments artDetailsForId.comments}}
+                         {{/if}}
+                    </div>
                </div>
                <div class="col-sm-5 col-md-5 col-lg-4">
                     </p><button class="btn btn-primary update paybutton" data-name="{{artDetailsForId.art_name}}"
-                    data-price="{{artDetailsForId.price}}">Purchase now</button></p>
+                         data-price="{{artDetailsForId.price}}">Purchase now</button></p>
                     Artist: {{artDetailsForId.artist_name}}<br>
                     Title: {{artDetailsForId.art_name}}<br Technique: {{artDetailsForId.technique}}<br>
                     Dimensions: {{artDetailsForId.dimension}}<br>
@@ -21,7 +23,7 @@
                          <div class="form-group">
                               <label for="comment-body"><strong>Comments (be nice): </strong></label>
                               <textarea name="comment-body" class="form-control" rows="5"></textarea><br>
-                              <button type="submit" class="btn btn-primary">Add Comment</button>
+                              <button type="submit" class="btn btn-primary load1">Add Comment</button>
                          </div>
                     </form>
                </div>
@@ -29,6 +31,9 @@
      </div>
 </div>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 <script src="/js/addcomment.js"></script>
 <script src="/js/buyart.js"></script>
