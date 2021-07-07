@@ -9,7 +9,7 @@ const loginFormHandler = async (event) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
-      })
+    });
 
     if (response.ok) {
       document.location.replace("/dashboard");
@@ -24,12 +24,16 @@ document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
 
-// change submit buttons onclick
-document.getElementById("submitBtn").onclick = function () {
-  document
-    .getElementById("submitBtn")
-    .outerHTML(
+$(".load1").click(function () {
+  var _this = $(this);
+  var existingHTML = _this.html();
+  $(_this)
+    .html(
       '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
     )
-    .setAttribute("disabled", true);
-};
+    .prop("disabled", false);
+
+  setTimeout(function () {
+    $(_this).html(existingHTML).prop("disabled", false);
+  }, 3000);
+});
