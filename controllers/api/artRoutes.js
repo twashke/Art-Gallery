@@ -28,7 +28,6 @@ router.post("/", withAuth, artUpload.single("myimage"), (req, res) => {
 // delete art by artid   endpoint /api/arts/4
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    console.log(req.params.id);
     const deleteArt = await Art.findOne(
       {
         where: {
@@ -111,7 +110,6 @@ router.put("/:id", withAuth, artUpload.single("myimage"), (req, res) => {
     },
   })
     .then((updatedData) => {
-      console.log(updatedData);
       if (!updatedData) {
         res.status(404).send({
           success: false,
