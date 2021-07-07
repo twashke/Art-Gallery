@@ -1,7 +1,5 @@
 const { Art } = require("../models");
 
-// id,art_name,artist_name,technique,dimension,price,other_details,img_url,user_id
-
 const Artdata = [
      {
           art_name: "In The Park",

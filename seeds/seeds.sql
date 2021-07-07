@@ -46,21 +46,20 @@ INSERT INTO art (art_name, artist_name, dimension, technique, price, other_detai
 VALUE ("Hens and Chicks","Tami","8x10","Photo","25.00","Macro, glossy, framed","https://res.cloudinary.com/dsi8e0wd1/image/upload/v1625031848/ArtWorks/hensAndChicks_r8pkzc.jpg",2,"Thugfencer");
 
 INSERT INTO comment (text, user_id, art_id)
-VALUE ("Nice work!",1,2);
+VALUE ("Gorgeous tree, and the Hawaiian Shave Ice truck in the background sets the scene.",1,1);
 
 INSERT INTO comment (text, user_id, art_id)
-VALUE ("Nice work!",1,3);
+VALUE ("Nice work!",2,1);
 
 INSERT INTO comment (text, user_id, art_id)
-VALUE (""Nice work"!",2,1);
+VALUE ("Great details.  Dewdrops are nice.",3,10);
 
 INSERT INTO comment (text, user_id, art_id)
-VALUE ("Nice work!",2,3);
+VALUE ("Sharp focus!  Were there filters applied?",4,7);
 
 INSERT INTO comment (text, user_id, art_id)
-VALUE ("Nice work!",3,1);
+VALUE ("Mando Mondays... Dent looks great, and mask does not appear to be heavily used",1,2);
 
 INSERT INTO comment (text, user_id, art_id)
-VALUE ("Nice work!",3,2);
-
+VALUE ("Would love to see a version of this on a black background.",2,9);
 

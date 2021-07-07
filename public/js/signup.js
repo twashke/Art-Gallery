@@ -25,7 +25,7 @@ document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
 
-// change submit buttons onclick
+
 document.getElementById("submitBtn").onclick = function () {
   document
     .getElementById("submitBtn")

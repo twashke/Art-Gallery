@@ -9,16 +9,12 @@ async function commentFormHandler(event) {
     window.location.toString().split("/").length - 1
   ];
 
-  //will remove this and from fecth req when user_id is taken from seesion
-  //   const user_id = 1;
-
   if (text) {
     const response = await fetch("/api/comments/", {
       method: "POST",
       body: JSON.stringify({
         art_id,
         text,
-        // user_id,
       }),
       headers: {
         "Content-Type": "application/json",
