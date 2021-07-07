@@ -75,8 +75,12 @@ router.post("/pay", (req, res) => {
       payment_method: "paypal",
     },
     redirect_urls: {
-      return_url: "http://localhost:3001/api/users/success",
-      cancel_url: "http://localhost:3001/api/users/cancel",
+      // return_url: "http://localhost:3001/api/users/success",
+      return_url:
+        "https://happylittleartgallery072021.herokuapp.com/api/users/success",
+      // cancel_url: "http://localhost:3001/api/users/cancel",
+      cancel_url:
+        "https://happylittleartgallery072021.herokuapp.com/api/users/cancel",
     },
     transactions: [
       {
