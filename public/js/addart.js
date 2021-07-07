@@ -19,11 +19,10 @@ async function newArtFormHandler(event) {
 
 document.querySelector("#addArt").addEventListener("submit", newArtFormHandler);
 
-// loading button spinner
 $(".load1").click(function () {
-  var _this = $(this); //click button
-  var existingHTML = _this.html(); //store exiting button HTML
-  //Add loading message and spinner
+  var _this = $(this); 
+  var existingHTML = _this.html(); 
+
   $(_this)
     .html(
       '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Uploading...'
@@ -31,6 +30,6 @@ $(".load1").click(function () {
     .prop("disabled", false);
 
   setTimeout(function () {
-    $(_this).html(existingHTML).prop("disabled", false); //show original HTML and enable
-  }, 3000); //3 seconds
+    $(_this).html(existingHTML).prop("disabled", false); 
+  }, 15000); 
 });
