@@ -1,4 +1,3 @@
-// Helper to build thumbnail URL which speeds up the displaying of cards for collection and dashboard
 module.exports = {
 
      format_time: (date) => {
