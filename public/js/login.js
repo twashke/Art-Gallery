@@ -29,11 +29,11 @@ $(".load1").click(function () {
   var existingHTML = _this.html();
   $(_this)
     .html(
-      '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Loading...'
+      '<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Logging In...'
     )
     .prop("disabled", false);
 
   setTimeout(function () {
     $(_this).html(existingHTML).prop("disabled", false);
-  }, 3000);
+  }, 5000);
 });
