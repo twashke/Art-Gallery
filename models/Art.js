@@ -2,7 +2,6 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Art extends Model { }
-// id,art_name,artist_name,technique,dimension,price,other_details,img_url,user_id
 Art.init(
      {
           id: {
@@ -19,7 +18,6 @@ Art.init(
                type: DataTypes.STRING,
                allowNull: false,
           },
-          //tech used for an art
           technique: {
                type: DataTypes.STRING,
                allowNull: false,
