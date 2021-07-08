@@ -6,7 +6,7 @@ async function deleteAnArt(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.reload("/dashboard");
     } else {
       alert("Failed to delete art");
     }
