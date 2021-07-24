@@ -61,7 +61,7 @@ The [Happy Little Art Gallery](https://happylittleartgallery072021.herokuapp.com
 
 ## Usage
 
-- Go to [Deployed **Happy Little Art Gallerty**](https://happylittleartgallery072021.herokuapp.com/)
+- Go to [Deployed **Happy Little Art Gallery Website**](https://happylittleartgallery072021.herokuapp.com/)
 - Use the **Login** tab to **Sign Up**
 - Enter **Username**, **Email**, and **Password**
 - The user is directed to their personal **Dashboard**
